@@ -106,7 +106,7 @@ var Map = React.createClass({
 			this.setState({
 				health:100,
 		        level:1,
-		        xp:20,
+		        xp:10,
 		        curxp:0,
 		        power:20,
 		        weapon:10,
@@ -116,12 +116,13 @@ var Map = React.createClass({
 		} else if(this.state.curxp==this.state.xp){
 			this.setState({
 				level:this.state.level+1,
-				xp:20*(this.state.level+1),
+				xp:10*(this.state.level+1),
+				power:20,
 				curxp:0,
-				food:(10*20*(this.state.level+1)-this.state.health)/10,
+				food:(10*10*(this.state.level+1)-this.state.health)/10,
 			});
-			console.log(this.state.food);
-			console.log(this.state.weapon)
+			// console.log(this.state.food);
+			// console.log(this.state.weapon)
 			this.startGame();
 		}
 	},
