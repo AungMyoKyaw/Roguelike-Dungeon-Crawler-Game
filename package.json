@@ -1,0 +1,11 @@
+{
+  "name": "rogulike-dugeon-crawler-game",
+  "version": "1.0.0",
+  "description": "Roguelike Dugeon Crawler Game",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aung Myo Kyaw",
+  "license": "ISC"
+}

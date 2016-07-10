@@ -1,0 +1,110 @@
+h1{
+	text-align:center;
+	font-family:sans-serif;
+	font-size:2em;
+	font-weight:bold;
+	color:#31B543;
+	a{
+		text-decoration: none;
+	}
+	&:after{
+		display: block;
+		position: relative;
+		left:0;
+		bottom:-0;
+		width: 40%;
+		height: .2em;
+		margin:.5em auto;
+		background-color:#2FBB4E;
+		content: '';
+		transition: width 1s;
+	}
+	&:hover:after{
+		width: 85%;
+	}
+}
+.game{
+	width:85%;
+	margin:auto;
+	overflow:auto;
+	.board{
+		display:table;
+		width: 100%;
+		margin:auto;
+	}
+	.message{
+		display: table;
+		margin:.5em auto;
+		.mes{
+			display: table-cell;
+			padding-right:.5em;
+			.title{
+				font-size: 1.3em;
+				font-weight: bold;
+				font-family: sans-serif;
+				&:after{
+					content: ' : ';
+				}
+			}
+			.value{
+				@extend .title;
+				&:after{
+					content: '';
+				}
+			}
+			.playblock{
+				display: inline-block;
+				width:1em;
+				height:1em;
+				background-color:blue;
+				margin-right: 1em;
+			}
+			.weaponblock{
+				@extend .playblock;
+				background-color:#E72FE5;
+			}
+			.foodblock{
+				@extend .playblock;
+				background-color:#4DC55F;
+			}
+			.enemyblock{
+				@extend .playblock;
+				background-color:#EC4A4A;
+			}
+		}
+	}
+}
+.row{
+	display:table-row;
+	border:none;
+	// clear:both;
+}
+.cell{
+	display:table-cell;
+}
+.wall{
+	display:table-cell;
+	border:none;
+	height:.7em;
+	background-color:#000000;
+}
+.grass{
+	@extend .wall;
+	background-color:#F7F7F7;
+}
+.food{
+	@extend .wall;
+	background-color:#4DC55F;
+}
+.enemy{
+	@extend .wall;
+	background-color:#EC4A4A;
+}
+.weapon {
+	@extend .wall;
+	background-color:#E72FE5;
+}
+.play{
+	@extend .wall;
+	background-color:blue;
+}
